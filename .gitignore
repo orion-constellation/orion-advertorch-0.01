@@ -2,6 +2,9 @@
 target/
 .env
 node_modules/
+.archive/
+wandb/
+
 
 
 
