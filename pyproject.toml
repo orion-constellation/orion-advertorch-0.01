@@ -1,0 +1,14 @@
+[project]
+name = "advertorch_experiments"
+version = "0.1.0"
+dependencies = [
+    "torch",
+    "sklearn",
+    "advertorch"
+]
+
+[project.optional-dependencies]
+dev = [
+    "wandb",
+    "pytest"
+]

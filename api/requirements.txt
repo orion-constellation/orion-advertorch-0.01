@@ -1,0 +1,3 @@
+fastapi == "0.111"
+fastapi == "0.02"
+uvicorn == "1.00"

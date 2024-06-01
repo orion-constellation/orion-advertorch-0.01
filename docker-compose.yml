@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  adversarial-data-gen:
+    build:
+      context: ../adversarial-data-gen/main.py
+      dockerfile: Dockerfile
+    user: core
+    networks:
+      - app-network
+
+  threat-intelligence:
+    build:
+      context: ../orion-poc/hunter/src/main.rs
+      dockerfile: Dockerfile
+    user: core
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
