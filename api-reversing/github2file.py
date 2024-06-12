@@ -1,4 +1,10 @@
-""" Extracting Github Documentation for the target for OSINT and other reconnaisance """
+""" Extracting Github Documentation for the target for OSINT and other reconnaisance 
+Borrowed from: https://github.com/cognitivecomputations/github2file
+
+
+
+@TODO LOTS OF WORK TO BE DONE
+"""
 
 import sys
 import re

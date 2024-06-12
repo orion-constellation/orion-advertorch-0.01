@@ -1,0 +1,88 @@
+{
+  "endpoints": [
+    {
+      "endpoint": "/predict",
+      "probability": 0.25,
+      "http_commands": [
+        {
+          "command": "GET",
+          "probability": 0.2
+        },
+        {
+          "command": "POST",
+          "probability": 0.8
+        }
+      ]
+    },
+    {
+      "endpoint": "/classify",
+      "probability": 0.15,
+      "http_commands": [
+        {
+          "command": "GET",
+          "probability": 0.1
+        },
+        {
+          "command": "POST",
+          "probability": 0.9
+        }
+      ]
+    },
+    {
+      "endpoint": "/generate",
+      "probability": 0.1,
+      "http_commands": [
+        {
+          "command": "GET",
+          "probability": 0.1
+        },
+        {
+          "command": "POST",
+          "probability": 0.9
+        }
+      ]
+    },
+    {
+      "endpoint": "/detect",
+      "probability": 0.2,
+      "http_commands": [
+        {
+          "command": "GET",
+          "probability": 0.3
+        },
+        {
+          "command": "POST",
+          "probability": 0.7
+        }
+      ]
+    },
+    {
+      "endpoint": "/segment",
+      "probability": 0.1,
+      "http_commands": [
+        {
+          "command": "GET",
+          "probability": 0.2
+        },
+        {
+          "command": "POST",
+          "probability": 0.8
+        }
+      ]
+    },
+    {
+      "endpoint": "/analyze",
+      "probability": 0.2,
+      "http_commands": [
+        {
+          "command": "GET",
+          "probability": 0.4
+        },
+        {
+          "command": "POST",
+          "probability": 0.6
+        }
+      ]
+    }
+  ]
+}
