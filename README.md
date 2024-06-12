@@ -1,4 +1,4 @@
-Orion Defensive AI Research
+Orion Defensive AI Research:: Very new experimental good times. In need of Firepower.
 
 See [Welcome](https://github.com/orion-constellation/orion-advertorch-0.01/blob/b1a02c42ef9183637e83fb0a6314c3f8872a2cdc/WELCOME.md) (Apologies for code messiness - solo project until now and lots of redundancy etc but feel free to raise an issue).
 
