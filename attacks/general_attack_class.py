@@ -15,6 +15,7 @@ import os
 import sys
 import argsparser 
 import torch
+from torch import nn
 from torch.nn import Module
 from torch.nn.functional import Functional as F #TODO FIX ME!
 
@@ -42,7 +43,7 @@ class GeneralAttackClass(nn.Module):
     
     
 
-    def forward(self, model, x, y) -> NN Forward Pass:
+    def forward(self, model, x, y) -> nn.Module:
         # Example PGD attack logic
         perturbed_x = x.clone().detach().requires_grad_(True)
         for _ in range(self.iterations):
