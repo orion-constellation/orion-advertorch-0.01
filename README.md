@@ -1,17 +1,16 @@
-#Encrypted Data, Adversarial Networks, and Defence Project
+Orion Defensive AI Research
+
+See (Apologies for code messiness - solo project until now and lots of redundancy etc but feel free to raise an issue):
+[(Welcome)[https://github.com/orion-constellation/orion-advertorch-0.01/blob/b1a02c42ef9183637e83fb0a6314c3f8872a2cdc/WELCOME.md]]
 
 ## Overview
-This repository is dedicated to exploring the intersection of privacy-preserving technologies and adversarial machine learning within the PyTorch ecosystem. On 10 May 2024, we embarked on an innovative project that leverages Crypten for encrypted computations and advertorch for managing adversarial data, creating a robust training environment aimed at developing new heuristics for machine learning models.
+This repository is dedicated to exploring the intersection of privacy-preserving technologies and adversarial machine learning within the PyTorch ecosystem. On 10 May 2024, we embarked on an innovative project that leverages Crypten for encrypted computations and advertorch for managing adversarial data, creating a robust training environment aimed at developing new heuristics for machine learning models and Reinforcement Learning for new heuristics
 
 ### Project Goals
-Experiment with Adversarial Attacks: Utilize advertorch to generate and defend against adversarial attacks, enhancing our models' robustness.
-Privacy-Preserving Machine Learning: Employ Crypten to perform computations on encrypted data, ensuring privacy and security.
-Robust Logging: Implement detailed logging mechanisms to analyze behavior and traffic patterns post-experiments.
-Rust Integration: Develop a Rust wrapper to facilitate fast and efficient experimentation, providing a high-performance interface to the underlying Python libraries.
-Front-End Integration: Create a simple front-end that utilizes Verida.ts for handling encrypted data storage, leveraging their decentralized identity (DiD) and encrypted identity services.
-Stream Processing: Incorporate Red panda and Timely to manage real-time, streaming data effectively.
-Hope and Inspiration: Embark on this technological journey with optimism and the drive to innovate.
-
+1. Experiment with Adversarial Attacks: Utilize advertorch to generate and defend against adversarial attacks, enhancing our models' robustness.
+2. Utilise "Ephemeral Knowledge Graphs" to model multi-stage attack vectors.
+3. Utilise KG's to model MITREAttack Library for automatic matching against table based on probability score.
+4. Provide reporting.
 
 ### Requirements
 Python: Version 3.8 or higher.
@@ -25,23 +24,10 @@ Installation
 To get started with this project, clone the repository and install the required dependencies.
 
 ```bash
-#Copy code
+
 git clone https://github.com/your-repository/encrypted-adv-networks.git
 cd encrypted-adv-networks
 pip install -r requirements.txt
-cargo build --release
-```
-
-### Usage
-After installation, you can start experimenting with the tools and examples provided in the repository.
-
-```bash
-#Copy code
-# To run a simple adversarial attack experiment
-python run_experiment.py
-
-# To interact with the Rust modules
-cargo run --example simple_interaction
 ```
 
 ### Contributing
