@@ -11,6 +11,13 @@ device = "mps" if torch.backends.mps.is_available() else "cpu"
 # @TODO ADD DOCSTRINGS AND CLASS SIGNATURES
 
 # Define a TypedDict for the model
+"""
+Class representing a collection of attack models for adversarial attacks.
+
+Attributes:
+    PGDAttack (PGDAttackModel): An instance of the PGDAttackModel class representing a Projected Gradient Descent attack.
+    AttackVectors (attack_dict): A dictionary containing various attack models for adversarial attacks.
+"""
 class AttackModels(TypedDict):
     PGDAttack: PGDAttackModel
     AttackVectors: attack_dict
@@ -53,6 +60,21 @@ pgd_attack = ExamplePGDAttack(epsilon=0.3, alpha=0.01, iterations=40)
 
 adver_torch_attack = AdverTorchAttack(attack=pgd_attack, model=model)
 
+
+"""
+Execute multiple iterations of adversarial attacks on a given dataset using the provided AdverTorchAttack object.
+
+Parameters:
+    attack (AdverTorchAttack): An instance of AdverTorchAttack containing the attack method and the model to be attacked.
+    data_loader (torch.utils.data.DataLoader): DataLoader object containing the dataset to be perturbed.
+    device (torch.device): Device on which the computations will be performed.
+
+Returns:
+    None
+
+This function iterates over the data_loader, perturbs the input data using the attack method, evaluates the model's performance on the perturbed data, and prints the accuracy on the perturbed data.
+
+"""
 def execute_iterations(attack: AdverTorchAttack, data_loader: torch.utils.data.DataLoader, device: torch.device):
     attack.to(device)
     for x, y in data_loader:
@@ -66,6 +88,17 @@ def execute_iterations(attack: AdverTorchAttack, data_loader: torch.utils.data.D
         print(f"Accuracy on perturbed data: {accuracy.item() * 100:.2f}%")
 
 
+"""
+Execute the main function to perform multiple iterations of adversarial attacks on a dummy dataset using the provided AdverTorchAttack object.
+
+This function initializes a logger, creates a dummy data loader for testing purposes, and then executes iterations with the attack by calling the execute_iterations function with the AdverTorchAttack object and the dummy data loader.
+
+Parameters:
+    None
+
+Returns:
+    None
+"""
 def main():
     # Init nice logger
     _logger = setup_logging()

@@ -6,6 +6,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from pydantic import BaseModel
 from typing import List, Dict, Optional
 import pandas as np
+import llamaindex
 
 
 class RawData(BaseModel, raw_data):
@@ -18,6 +19,7 @@ class PreProcess(BaseModel):
     validate: BaseCrossValidator
     shuffle: BaseShuffleSplit
     model_base: KNeighborsClassifier
+
     
     
 
@@ -29,9 +31,14 @@ class ProduceMetrics(RawData):
                                  "Acc": accuracy_score(self.data),
                                  "ROC_AUC": roc_auc_score(self.data)}
         
-    def preprocess_data(self.raw_data):
-        
-    
     def evluate_metrics(accuracy_metrics: Dict):
 
 
+class PreprocessData(PreProcess):
+    def __init__(self, raw_data, validation, shuffle, model_base, index=llamaindex.LLamaIndex):
+        self.data = raw_data
+        self.validation = validation
+        self.shuffle = shuffle
+        self.modelbase = model_base
+
+    def add_documents
